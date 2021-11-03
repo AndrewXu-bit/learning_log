@@ -1,0 +1,18 @@
+{% extends "learning_logs/base.html" %}
+
+{% block page_header %}
+    <h2>注册账号都不会吗？不会吧不会吧！</h2>
+{% endblock page_header %}
+{% block content %}
+
+    <form method="post" action="{% url 'users:register'%}">
+        {% csrf_token %}
+        {{ form.as_p }}
+
+            <button name="submit" class="btn btn-primary">注册你滴账号</button>
+
+
+        <input type="hidden" name="next" value="{% url 'learning_logs:index' %}" />
+    </form>
+
+{% endblock content %}

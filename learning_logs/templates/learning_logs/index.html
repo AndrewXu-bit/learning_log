@@ -1,0 +1,11 @@
+{% extends "learning_logs/base.html" %}
+{% block page_header %}
+    <div class="jumbotron">
+        <h1 class="dispaly-3">今天也要努力学习呢</h1>
+
+        <p class="lead">知识是人类进步的阶梯<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;——高尔基</p>
+        <a class="btn btn-lg btn-primary" href="{% url 'users:register' %}"role="button">快来注册！！！ &raquo;</a>
+        <a class="btn btn-lg btn-primary" href="{% url 'learning_logs:topics' %}"role="button">滚去学习！！！ &raquo;</a>
+    </div>
+{% endblock page_header %}
